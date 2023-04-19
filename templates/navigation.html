@@ -7,10 +7,10 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="{{ url_for('index') }}">Главная</a>
+        <a class="nav-link {% if request.endpoint == 'index' %} active {% endif %}" href="{{ url_for('index') }}">Главная</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ url_for('urls') }}">Ссылки</a>
+        <a class="nav-link {% if request.endpoint == 'urls' %} active {% endif %}" href="{{ url_for('urls') }}">Ссылки</a>
       </li>
     </ul>
   </div>
